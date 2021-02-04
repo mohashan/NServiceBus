@@ -9,4 +9,14 @@ namespace Messages
         public int Count { get; set; }
         public string Requester { get; set; }
     }
+
+    public class OrderPlaced : IEvent
+    {
+        public string Id { get; set; }
+    }
+
+    public class OrderBilled : IEvent
+    {
+        public string Id { get; set; }
+    }
 }

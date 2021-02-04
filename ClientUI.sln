@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientUI", ".\ClientUI\ClientUI\ClientUI.csproj", "{E8573DAC-4505-4C0E-8F0F-B7AE599E35C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientUI", "ClientUI\ClientUI\ClientUI.csproj", "{E8573DAC-4505-4C0E-8F0F-B7AE599E35C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", ".\MessageAssembly\MessageAssembly\Messages.csproj", "{5F855348-90AA-461C-8507-7ACAAB33D3CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "MessageAssembly\MessageAssembly\Messages.csproj", "{5F855348-90AA-461C-8507-7ACAAB33D3CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales", ".\Sales\Sales\Sales.csproj", "{2AB2F3B3-5115-48FB-9928-B7B81E039C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales", "Sales\Sales\Sales.csproj", "{2AB2F3B3-5115-48FB-9928-B7B81E039C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing", "Billing\Billing.csproj", "{455A1DD6-5AC7-463C-8554-491BFFC89AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping", "Shipping\Shipping.csproj", "{79AF344B-D618-4433-AE45-FE56F87C322D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{2AB2F3B3-5115-48FB-9928-B7B81E039C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB2F3B3-5115-48FB-9928-B7B81E039C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB2F3B3-5115-48FB-9928-B7B81E039C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455A1DD6-5AC7-463C-8554-491BFFC89AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455A1DD6-5AC7-463C-8554-491BFFC89AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455A1DD6-5AC7-463C-8554-491BFFC89AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455A1DD6-5AC7-463C-8554-491BFFC89AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AF344B-D618-4433-AE45-FE56F87C322D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AF344B-D618-4433-AE45-FE56F87C322D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AF344B-D618-4433-AE45-FE56F87C322D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AF344B-D618-4433-AE45-FE56F87C322D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
