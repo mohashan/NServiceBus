@@ -12,9 +12,11 @@ namespace ClientUI
 
         static async Task RunLoop(IEndpointInstance endpointInstance)
         {
+            var lastOrder = string.Empty;
+
             while (true)
             {
-                log.Info("Press 'P' to place an order, or 'Q' to quit.");
+                log.Info("Press 'P' to place an order, 'C' to cancel last order, or 'Q' to quit.");
                 var key = Console.ReadKey();
                 Console.WriteLine();
 
@@ -32,6 +34,17 @@ namespace ClientUI
                         await endpointInstance.Send(command)
                             .ConfigureAwait(false);
 
+                        lastOrder = command.Id; // Store order identifier to cancel if needed.
+                        break;
+
+                    case ConsoleKey.C:
+                        var cancelCommand = new CancelOrder
+                        {
+                            Id = lastOrder
+                        };
+                        await endpointInstance.Send(cancelCommand)
+                            .ConfigureAwait(false);
+                        log.Info($"Sent a correlated message to {cancelCommand.Id}");
                         break;
 
                     case ConsoleKey.Q:
@@ -55,6 +68,7 @@ namespace ClientUI
 
             var routing = transport.Routing();
             routing.RouteToEndpoint(typeof(PlaceOrder), "Sales");
+            routing.RouteToEndpoint(typeof(CancelOrder), "Sales");
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);

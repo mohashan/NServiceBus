@@ -24,4 +24,10 @@ namespace Messages
     {
         public string Id { get; set; }
     }
+
+    public class CancelOrder
+    : ICommand
+    {
+        public string Id { get; set; }
+    }
 }

@@ -1,4 +1,5 @@
-﻿using NServiceBus;
+﻿using Messages;
+using NServiceBus;
 using System;
 using System.Threading.Tasks;
 
@@ -11,7 +12,6 @@ namespace Billing
             Console.Title = "Billing";
 
             var endpointConfiguration = new EndpointConfiguration("Billing");
-
             var transport = endpointConfiguration.UseTransport<LearningTransport>();
             transport.StorageDirectory(@"C:\.learningtransport");
 
