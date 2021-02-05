@@ -15,6 +15,10 @@ namespace Shipping
             var transport = endpointConfiguration.UseTransport<LearningTransport>();
             transport.StorageDirectory(@"C:\.learningtransport");
 
+
+            var persistence = endpointConfiguration.UsePersistence<LearningPersistence>();
+
+
             var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);
 
             Console.WriteLine("Press Enter to exit.");

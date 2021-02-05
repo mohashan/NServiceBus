@@ -13,6 +13,7 @@ namespace Sales
             var endpointConfiguration = new EndpointConfiguration("Sales");
 
             var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            
             transport.StorageDirectory(@"C:\.learningtransport");
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);

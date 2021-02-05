@@ -18,8 +18,8 @@ namespace Sales
             log.Info($"Produced Rand = {rand}");
 
 
-            if (rand > 2)
-                throw new Exception("BOOM");
+            //if (rand > 2)
+              //  throw new Exception("BOOM");
 
 
             var orderPlaced = new OrderPlaced

@@ -10,6 +10,11 @@ namespace Messages
         public string Requester { get; set; }
     }
 
+    public class ShipOrder : ICommand
+    {
+        public string Id { get; set; }
+    }
+
     public class OrderPlaced : IEvent
     {
         public string Id { get; set; }
